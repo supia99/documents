@@ -1,9 +1,32 @@
+---
+# try also 'default' to start simple
+theme: default
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://source.unsplash.com/collection/94734566/1920x1080
+# apply any windi css classes to the current slide
+class: 'text-center'
+# https://sli.dev/custom/highlighters.html
+highlighter: shiki
+# show line numbers in code blocks
+lineNumbers: false
+# some information about the slides, markdown enabled
+info: |
+  ## Slidev Starter Template
+  Presentation slides for developers.
+
+  Learn more at [Sli.dev](https://sli.dev)
+# persist drawings in exports and build
+drawings:
+  persist: false
+---
+
 # スクラム基礎
 
 ---
 
 # もくじ
-* aaa
+
 
 ---
 
@@ -13,14 +36,12 @@
   * スクラム以外の手法で、エクストリーム・プログラミングやユーザー機能駆動開発がある
   * アジャイルでは、スクラムが用いられていることが多い
     * ウォータフォール開発体制をあまり変えずに実施できるように見えるから？
----
-
 ```
 ●ウォータフォール
- PM - PL - 開発メンバー
+ PM              > 開発リーダー     > 開発メンバー
 
-●スクラム
- プロダクトオーナー - スクラムマスター - 開発者
+●(間違った)スクラム
+ プロダクトオーナー > スクラムマスター > 開発者
 ```
 ---
 
@@ -38,34 +59,44 @@
   * 適応：改善するために適応する
 * 変化を受け入れ、それに適応することが重要
   <!-- * 変化を受け入れることで、プロダクト価値を最大化する -->
-* 継続的に開発可能であることが重要
+* 持続的に開発可能であることが重要
   <!-- * No デスマーチ -->
-* スクラムが効果的である案件の条件がある
-  * 程よく要件が決まっていない、または、程よく技術的にわからない
+  * そのために、優先順位をつけることとスコープを小さくすることを大切にする
 --- 
 
-<!-- ## スクラムのテクニック
-* カンバン -->
-  <!-- * 進捗状況を見える化 -->
+## スクラムが効果的である案件の条件
+
+下図の混沌部分
+
+<img src="pic/scrum_chaos.png" class="h-88" />
 ---
 
-# スクラムイベント
-* プロダクトゴールに向けての活動
-* スプリントという1か月以内の一定期間で開発を進める(できるだけ短い方がよい) 
+# スクラムにおける活動
+* プロダクトの価値を上げていく活動
+* スプリントを繰り返して成果物を積み重ねていく 
 <br>
 
-## スクラムガイドに定義されているイベント
 
+---
+
+## スプリント中に実施するイベント
+
+
+### 1スプリントに1回実施するイベント
 * スプリントプラニング：スプリントの計画
-* デイリースクラム：問題の共有
-  * **決して、進捗報告ではない**
+  * そのスプリントで実施する内容の決定と計画
 * スプリントレビュー：成果物の検査
+  * 
 * レトロスペクティブ：活動の検査
 
-```図
-一輪車-> 自転車->バイク->自動車->F1カー
-```
-<!-- * プロダクトを作っていくことでリリースの見通しを立てる -->
+
+### 毎日実施するイベント
+* デイリースクラム：問題の共有
+  * **決して、進捗報告ではない**
+
+---
+
+
 
 ---
 
@@ -76,7 +107,6 @@
 * 決められた制限時間を守る
   * 話し合いがプロダクトの価値を高めることに直結しないため
   <!-- * 予期できることには限界がある -->
-
 ---
 
 ## スプリントに含まれないイベント
@@ -102,6 +132,7 @@
       * 例：単体テストと結合テストが書かれている。mainブランチにマージされている。
 
 **プロダクトバックログとインクリメントで進捗を評価する**
+
 ---
 
 # スクラムチームの構成
@@ -182,10 +213,10 @@
   <!-- * 活動していく過程でイベントが増えることもあるかもだが、最終的にはなくなると思う -->
 * スクラムガイドに書かれている内容を改変したり、一部だけ実践することは非推奨
   * スラクムで得られる恩恵を損なうため
-
 ---
 
 # 参照
 * [アジャイルソフトウェア開発宣言(PDF)](https://agilemanifesto.org/iso/ja/manifesto.html)
 * [スクラムガイド(PDF)](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Japanese.pdf)
+* [スクラムリファレンスカード(PDF)](https://scrumreferencecard.com/ScrumReferenceCard-jp.pdf)
 * [エッセンシャルスクラム(書籍)](https://www.amazon.co.jp/dp/B00MB6GO7E/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
